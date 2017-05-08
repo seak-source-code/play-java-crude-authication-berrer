@@ -24,13 +24,13 @@ public class UserController {
     private User user;
 
     //save user
-    public Result saveUser(){
+    public Result saveUser(long roleId){
 
         JsonNode json = request().body().asJson();
         if(json == null){
             return badRequest(Util.createRespone("Expecting Json data", false));
         }
-        service.saveUser(Json.fromJson(json, User.class));
+        service.saveUser(Json.fromJson(json, User.class), roleId);
         return ok(" current user has been inserted to database");
     }
 

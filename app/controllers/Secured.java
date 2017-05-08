@@ -14,15 +14,16 @@ import java.util.Date;
  */
 public class Secured extends Security.Authenticator {
 
+
     @Override
     public String getUsername(Http.Context ctx) {
         UserToken token = new UserToken();
         String[] authTokenHeaderValues = ctx.request().headers().get(SecurityController.AUTH_TOKEN_HEADER);
         if ((authTokenHeaderValues != null) && (authTokenHeaderValues.length == 1) && (authTokenHeaderValues[0] != null)) {
             token = UserToken.find.where().eq("authToken", authTokenHeaderValues[0]).findUnique();
-            if (token != null) {
 
-                if(token.isExpire(token.expriedDate) == true){
+            if (token != null) {
+                if(token.isExpire(token.expriedDate) == false){
                     token.delete();
                     return null;
                 }

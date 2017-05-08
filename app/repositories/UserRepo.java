@@ -12,7 +12,7 @@ import java.util.List;
 @ImplementedBy(UserRepoImpl.class)
 public interface UserRepo {
     
-    void saveUser(User user);
+    void saveUser(User user, long roleId);
     
     List<User> findAllUser();
     

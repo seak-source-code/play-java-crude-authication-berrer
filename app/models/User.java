@@ -30,6 +30,13 @@ public class User extends Model {
     @OneToOne(mappedBy = "user")
     private UserToken userToken;
 
+    @OneToOne
+    @JoinColumn(name = "role_id")
+    public UserRole userRole;
+
+
+
+
 
 
     public static byte[] getSha512(String value) {

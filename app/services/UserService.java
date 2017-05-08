@@ -12,7 +12,7 @@ import java.util.List;
 @ImplementedBy(UserServiceImpl.class)
 public interface UserService  {
 
-    void saveUser(User user);
+    void saveUser(User user, long roleId);
 
     List<User> findAllUser();
 

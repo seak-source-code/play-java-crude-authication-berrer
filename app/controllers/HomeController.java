@@ -1,6 +1,7 @@
 package controllers;
 
 
+import play.mvc.Http;
 import play.mvc.Result;
 import play.mvc.Security;
 
@@ -13,6 +14,6 @@ public class HomeController  {
 
     @Security.Authenticated(Secured.class)
     public Result home(){
-        return ok("this is an rest api");
+        return ok("rest-api-data");
     }
 }

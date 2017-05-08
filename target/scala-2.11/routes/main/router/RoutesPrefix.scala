@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/kimseak/local/2nt/bvc-power/setting up project/play-java-starter-example/conf/routes
-// @DATE:Mon May 08 09:41:20 ICT 2017
+// @SOURCE:/Users/kimseak/github/play-java-crude-authication-berrer/conf/routes
+// @DATE:Mon May 08 14:39:32 ICT 2017
 
 
 package router {

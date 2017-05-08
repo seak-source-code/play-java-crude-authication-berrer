@@ -39,7 +39,7 @@ public class UserToken extends Model{
         Date date = new Date();
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
-        cal.add(Calendar.MINUTE, 1);
+        cal.add(Calendar.MINUTE, 30);
 
         expriedDate = cal.getTime();
         return  expriedDate;

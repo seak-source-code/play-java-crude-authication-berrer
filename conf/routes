@@ -6,9 +6,15 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 GET      /                          controllers.HomeController.home()
 
 #User
-POST    /user/save                  controllers.UserController.saveUser()
+POST    /user/save/:id              controllers.UserController.saveUser(id:Long)
 GET     /user/list-user             controllers.UserController.findAllUser()
 
 #AUTHENCATION
 POST    /login                      controllers.SecurityController.login
+GET     /logout                     controllers.SecurityController.logout
+
+
+#UserRole
+POST   /user/role/save              controllers.UserRoleController.saveUserRole
+GET    /user/list-role              controllers.UserRoleController.findAllUserRole
 
